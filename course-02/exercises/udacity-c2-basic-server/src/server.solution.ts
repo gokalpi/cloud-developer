@@ -70,15 +70,15 @@ import { Car, cars as cars_list } from './cars';
   
 
   // @TODO Add an endpoint to get a list of cars
-  // it should be filterable by make with a query paramater
+  // it should be filterable by make with a query parameter
   app.get( "/cars/", ( req: Request, res: Response ) => {
-      // destruct our query paramaters
+      // destruct our query parameters
       let { make } = req.query;
 
       
       let cars_list = cars;
 
-      // if we have an optional query paramater, filter by it
+      // if we have an optional query parameter, filter by it
       if (make) {
         cars_list = cars.filter((car) => car.make === make);
       }

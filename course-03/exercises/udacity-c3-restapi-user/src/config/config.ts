@@ -1,3 +1,7 @@
+if (process.env.ENV !== 'production') {
+  require('dotenv').config();
+}
+
 export const config = {
   "dev": {
     "username": process.env.POSTGRESS_USERNAME,

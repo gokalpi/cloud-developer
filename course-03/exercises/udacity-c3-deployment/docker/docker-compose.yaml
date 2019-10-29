@@ -11,29 +11,29 @@ services:
   backend-user:
     image: scheele/udacity-restapi-user
     environment:
-      POSTGRESS_USERNAME: $POSTGRESS_USERNAME
-      POSTGRESS_PASSWORD: $POSTGRESS_PASSWORD 
-      POSTGRESS_DB: $POSTGRESS_DB 
-      POSTGRESS_HOST: $POSTGRESS_HOST 
-      AWS_REGION: $AWS_REGION 
-      AWS_PROFILE: $AWS_PROFILE 
-      AWS_BUCKET: $AWS_BUCKET
-      JWT_SECRET: $JWT_SECRET
-      URL: "http://localhost:8100"
+      POSTGRESS_USERNAME: udagramgokalpdev
+      POSTGRESS_PASSWORD: udagramgokalpdev 
+      POSTGRESS_DB: udagramgokalpdev 
+      POSTGRESS_HOST: udagramgokalpdev.cei3k5l6kcp8.eu-central-1.rds.amazonaws.com 
+      AWS_REGION: eu-central-1 
+      AWS_PROFILE: default
+      AWS_BUCKET: udagram-gokalp-dev
+      JWT_SECRET: helloworld
+      URL: "http://192.168.99.100:8100"
   backend-feed:
     image: scheele/udacity-restapi-feed
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
-      POSTGRESS_USERNAME: $POSTGRESS_USERNAME
-      POSTGRESS_PASSWORD: $POSTGRESS_PASSWORD 
-      POSTGRESS_DB: $POSTGRESS_DB 
-      POSTGRESS_HOST: $POSTGRESS_HOST 
-      AWS_REGION: $AWS_REGION 
-      AWS_PROFILE: $AWS_PROFILE 
-      AWS_BUCKET: $AWS_BUCKET
-      JWT_SECRET: $JWT_SECRET
-      URL: "http://localhost:8100"
+      POSTGRESS_USERNAME: udagramgokalpdev
+      POSTGRESS_PASSWORD: udagramgokalpdev 
+      POSTGRESS_DB: udagramgokalpdev 
+      POSTGRESS_HOST: udagramgokalpdev.cei3k5l6kcp8.eu-central-1.rds.amazonaws.com 
+      AWS_REGION: eu-central-1 
+      AWS_PROFILE: default
+      AWS_BUCKET: udagram-gokalp-dev
+      JWT_SECRET: helloworld
+      URL: "http://192.168.99.100:8100"
   frontend:
     image: scheele/udacity-frontend:local
     ports:

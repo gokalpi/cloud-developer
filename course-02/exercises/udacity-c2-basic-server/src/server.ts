@@ -69,7 +69,7 @@ import { Car, cars as cars_list } from './cars';
   } );
 
   // @TODO Add an endpoint to GET a list of cars
-  // it should be filterable by make with a query paramater
+  // it should be filterable by make with a query parameter
 
   // @TODO Add an endpoint to get a specific car
   // it should require id
